@@ -12,18 +12,23 @@
             background-color: #f3f3f3;
         }
         .hero {
-            background: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Cup-o-cofee-no-spoon.svg') no-repeat center center;
-            background-size: cover;
-            height: 60vh;
-            color: white;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .hero h1 {
-            font-size: 4em;
-            margin: 0;
+        .hero-text {
+            flex: 1;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: right;
+        }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
         }
         .content {
             display: flex;
@@ -45,18 +50,48 @@
             text-align: center;
             padding: 10px;
         }
+        .menu {
+            margin-top: 20px;
+        }
+        .menu-item {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1>Welcome to Our Coffee Shop</h1>
+        <div class="hero-text">
+            <h1>Welcome to Our Coffee Shop</h1>
+        </div>
+        <div class="hero-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Cup-o-cofee-no-spoon.svg" alt="Coffee Cup">
+        </div>
     </div>
     <div class="content">
         <div class="main-content">
             <h2>About Us</h2>
             <p>We are a cozy coffee shop offering a variety of coffee blends and pastries. Our mission is to provide a relaxing environment where you can enjoy a great cup of coffee and connect with others.</p>
             <h2>Our Menu</h2>
-            <p>From classic espresso to delicious lattes and cappuccinos, we have something for every coffee lover. Don't forget to try our freshly baked pastries!</p>
+            <div class="menu">
+                <div class="menu-item">
+                    <input type="checkbox" id="croissant">
+                    <label for="croissant">Croissant</label>
+                </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="muffin">
+                    <label for="muffin">Muffin</label>
+                </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="scone">
+                    <label for="scone">Scone</label>
+                </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="danish">
+                    <label for="danish">Danish</label>
+                </div>
+            </div>
+            <h2>Coffee and Vancouver Culture</h2>
+            <p>Our coffee shop is deeply intertwined with the vibrant culture of Vancouver. We pride ourselves on sourcing local ingredients and supporting the community. Whether you're a local or a visitor, you'll find a warm welcome here.</p>
         </div>
         <div class="sidebar">
             <h2>Contact Us</h2>
