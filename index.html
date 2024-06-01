@@ -3,74 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop</title>
+    <title>Coffee Shop Landing Page</title>
     <style>
-        /* CSS styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        .hero-section {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Cup-o-cofee-no-spoon.svg');
-            background-size: cover;
-            height: 100vh;
+        .hero {
             display: flex;
-            justify-content: center;
             align-items: center;
-            color: white;
-            text-align: center;
+            justify-content: space-between;
+            background-color: #f7f7f7;
+            padding: 40px;
+        }
+
+        .hero-content {
+            max-width: 60%;
+        }
+
+        .hero img {
+            max-width: 30%;
+            height: auto;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .content {
+            flex: 3;
             padding: 20px;
         }
 
-        .content-section {
-            background-color: #f9f9f9;
-            padding: 50px;
-            text-align: center;
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background: #f4f4f4;
         }
 
-        .sidebar-section {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-        }
-
-        .footer-section {
-            background-color: #222;
+        .footer {
+            background: #333;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 10px 0;
+        }
+
+        .menu-item {
+            margin-bottom: 15px;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+        }
+
+        .menu-item p {
+            margin: 5px 0 0;
         }
     </style>
 </head>
 <body>
+
     <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>Welcome to Our Coffee Shop</h1>
-        <p>Experience the finest coffee crafted with passion.</p>
-    </section>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Coffee Shop</h1>
+        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Cup-o-cofee-no-spoon.svg" alt="Coffee Cup">
+    </div>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <h2>About Us</h2>
-        <p>At our coffee shop, we are dedicated to serving you the best coffee experience possible. From carefully sourced beans to expertly crafted drinks, we prioritize quality and satisfaction.</p>
-    </section>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Content Section -->
+        <div class="content">
+            <h2>Our Story</h2>
+            <p>At our coffee shop, we believe in the art of coffee making. Our baristas are trained to perfection and our beans are sourced from the finest plantations around the world.</p>
+            
+            <h2>Vancouver & Coffee</h2>
+            <p>Vancouver is known for its vibrant coffee culture. The people here have a deep appreciation for high-quality coffee, often seen socializing in cozy coffee shops or grabbing their favorite brew on the go. The city's rainy weather makes coffee a comforting and essential part of daily life.</p>
+            
+            <h2>Menu</h2>
+            <div class="menu-item">
+                <h3>Espresso</h3>
+                <p>Rich and bold espresso made from our special blend of beans.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Latte</h3>
+                <p>A smooth and creamy latte with a perfect balance of espresso and steamed milk.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Cappuccino</h3>
+                <p>A classic cappuccino with a perfect layer of foam on top.</p>
+            </div>
+        </div>
 
-    <!-- Sidebar Section -->
-    <aside class="sidebar-section">
-        <h3>Specials</h3>
-        <p>Check out our daily specials and promotions!</p>
-        <ul>
-            <li>Specialty Brews</li>
-            <li>Seasonal Flavors</li>
-            <li>Discounts for Regulars</li>
-        </ul>
-    </aside>
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <h2>Contact Us</h2>
+            <p>Address: 123 Coffee Street, Bean Town, CO</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@coffeeshop.com</p>
+        </div>
+    </div>
 
     <!-- Footer Section -->
-    <footer class="footer-section">
+    <div class="footer">
         <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
-    </footer>
+    </div>
+
+    <script>
+        // Add any JavaScript you need here
+    </script>
 </body>
 </html>
