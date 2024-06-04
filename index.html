@@ -10,22 +10,33 @@
             margin: 0;
             padding: 0;
         }
-        .hero {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Cup-o-cofee-no-spoon.svg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
+        .container {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-wrap: wrap;
+        }
+        .hero {
+            background-color: #4CAF50;
             color: white;
             text-align: center;
+            padding: 100px 20px;
+            flex: 1 0 100%;
         }
-        .content {
+        .menu {
+            flex: 1 0 50%;
             padding: 50px;
         }
+        .menu h2 {
+            text-align: center;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu ul li {
+            margin-bottom: 20px;
+        }
         .sidebar {
-            width: 300px;
+            flex: 1 0 50%;
             background-color: #f4f4f4;
             padding: 20px;
         }
@@ -34,6 +45,12 @@
             color: white;
             padding: 20px;
             text-align: center;
+            flex: 1 0 100%;
+        }
+        @media (max-width: 768px) {
+            .menu, .sidebar {
+                flex: 1 0 100%;
+            }
         }
     </style>
 </head>
@@ -42,15 +59,23 @@
         <h1>Welcome to our Coffee Shop</h1>
     </section>
 
-    <div class="content">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar purus nec metus malesuada, eu posuere mauris mollis. In hac habitasse platea dictumst. Nunc convallis, eros et tempus ultricies, ligula dui pharetra orci, sed fermentum ligula est vel metus.</p>
+    <div class="container">
+        <div class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li>Espresso - $2.50</li>
+                <li>Cappuccino - $3.00</li>
+                <li>Latte - $3.50</li>
+                <li>Americano - $2.75</li>
+                <li>Mocha - $4.00</li>
+            </ul>
+        </div>
+        
+        <aside class="sidebar">
+            <h3>Special Offer</h3>
+            <p>Buy one get one free on all coffees!</p>
+        </aside>
     </div>
-
-    <aside class="sidebar">
-        <h3>Special Offer</h3>
-        <p>Buy one get one free on all coffees!</p>
-    </aside>
 
     <footer class="footer">
         <p>&copy; 2024 Coffee Shop</p>
