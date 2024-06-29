@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitySip Coffee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .hero {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Cup-o-cofee-no-spoon.svg') no-repeat center center;
+            background-size: cover;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background-color: white;
+            margin-right: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: #ddd;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Welcome to CitySip Coffee</h1>
+    </div>
+    <div class="content">
+        <div class="main-content">
+            <h2>Our Coffee</h2>
+            <p>Enjoy a variety of freshly brewed coffee made from the finest beans around the world. Visit us for a delightful experience!</p>
+            <h2>Our Pastries</h2>
+            <p>Pair your coffee with our freshly baked pastries. Each one is a perfect complement to your drink.</p>
+        </div>
+        <div class="sidebar">
+            <h2>Opening Hours</h2>
+            <p>Monday - Friday: 7 AM - 7 PM</p>
+            <p>Saturday - Sunday: 8 AM - 5 PM</p>
+            <h2>Location</h2>
+            <p>123 Coffee St, Vancouver</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 CitySip Coffee. All rights reserved.</p>
+    </div>
+</body>
+</html>
