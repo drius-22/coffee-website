@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .hero {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Cup-o-cofee-no-spoon.svg') no-repeat center center/cover;
+            height: 400px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+        .content {
+            flex: 3;
+            padding: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>Welcome to Coffee Bliss</h1>
+        <p>Your perfect coffee destination</p>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>At Coffee Bliss, we pride ourselves on offering the finest coffee beans from around the world, expertly roasted and brewed to perfection. Whether you're a casual coffee drinker or a true aficionado, you'll find something to love at our shop.</p>
+            <h2>Our Menu</h2>
+            <ul>
+                <li>Espresso - A strong, rich coffee with a bold flavor.</li>
+                <li>Latte - Creamy and smooth, perfect for a relaxing afternoon.</li>
+                <li>Cappuccino - A delightful balance of coffee, milk, and foam.</li>
+                <li>Americano - A classic choice with a deep, robust taste.</li>
+            </ul>
+        </div>
+        <aside class="sidebar">
+            <h2>Special Offers</h2>
+            <p>Check out our latest promotions and seasonal specials. Don’t miss out on our limited-time offers!</p>
+            <ul>
+                <li>Buy 1 Get 1 Free on all lattes this month!</li>
+                <li>20% off on your first order online.</li>
+                <li>Free pastry with any purchase over $10.</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Bliss. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
