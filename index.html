@@ -9,6 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: #333;
+            line-height: 1.6;
         }
         .hero {
             background: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Cup-o-cofee-no-spoon.svg') no-repeat center center/cover;
@@ -31,18 +32,31 @@
         }
         .container {
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
             margin: 20px;
+            gap: 20px;
         }
         .content {
-            flex: 3;
+            flex: 2;
             padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
         }
         .sidebar {
             flex: 1;
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 8px;
+        }
+        .menu {
+            margin-top: 20px;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .menu li {
+            margin-bottom: 10px;
         }
         .footer {
             background-color: #333;
@@ -58,6 +72,31 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .contact-form {
+            margin-top: 20px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -70,14 +109,34 @@
         <div class="content">
             <h2>About Us</h2>
             <p>At Coffee Bliss, we pride ourselves on offering the finest coffee beans from around the world, expertly roasted and brewed to perfection. Whether you're a casual coffee drinker or a true aficionado, you'll find something to love at our shop.</p>
-            <h2>Our Menu</h2>
-            <ul>
-                <li>Espresso - A strong, rich coffee with a bold flavor.</li>
-                <li>Latte - Creamy and smooth, perfect for a relaxing afternoon.</li>
-                <li>Cappuccino - A delightful balance of coffee, milk, and foam.</li>
-                <li>Americano - A classic choice with a deep, robust taste.</li>
-            </ul>
+            
+            <div class="menu">
+                <h2>Our Menu</h2>
+                <ul>
+                    <li><strong>Espresso:</strong> A strong, rich coffee with a bold flavor.</li>
+                    <li><strong>Latte:</strong> Creamy and smooth, perfect for a relaxing afternoon.</li>
+                    <li><strong>Cappuccino:</strong> A delightful balance of coffee, milk, and foam.</li>
+                    <li><strong>Americano:</strong> A classic choice with a deep, robust taste.</li>
+                </ul>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
+        
         <aside class="sidebar">
             <h2>Special Offers</h2>
             <p>Check out our latest promotions and seasonal specials. Don’t miss out on our limited-time offers!</p>
@@ -93,5 +152,16 @@
         <p>&copy; 2024 Coffee Bliss. All rights reserved.</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+            
+            alert('Thank you for contacting us! We will get back to you soon.');
+            
+            // Optionally, you could add code here to actually send the form data
+            // For example, using AJAX to submit the form data to a server
+        });
+    </script>
 </body>
 </html>
